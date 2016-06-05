@@ -61,6 +61,10 @@ color: rgb(233,50,117);
   max-width: 64rem;
 }
 
+.container.narrow {
+  max-width: 56rem;
+}
+
 /* Medium and small screens (640px) */
 @media (min-width: 640px) {
   html { font-size: 112%; }
