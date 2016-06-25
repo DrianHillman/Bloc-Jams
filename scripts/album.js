@@ -28,6 +28,22 @@ var albumMarconi = {
     ]
 };
 
+var albumTedashii = {
+  title: 'This Time Around',
+  artist: 'Tedashii',
+  label: 'Reach Records',
+  year: '2016',
+  albumArtUrl: 'assets/images/album_covers/tedashii_this_time_around.jpg',
+  songs: [
+      { title: 'This Time Around', duration: '4:47' },
+      { title: 'I Get It', duration: '3:00' },
+      { title: 'Jumped out the Whip', duration: '4:08'},
+      { title: 'Be Me', duration: '3:31' },
+      { title: '808', duration: '3:40'},
+      { title: 'I\'m Good', duration: '3:17'}
+    ]
+};
+
 var createSongRow = function(songNumber, songName, songLength){
   var template =
     '<tr class="album-view-song-item">' +
@@ -51,6 +67,17 @@ var setCurrentAlbum = function(album) {
   albumArtist.firstChild.nodeValue = album.artist;
   albumReleaseInfo.firstChild.nodeValue = album.year + ' ' + album.label;
   albumImage.setAttribute('src', album.albumArtUrl);
+  
+  function rotateAlbums(){
+    if(album.title == "The Colors"){
+      setCurrentAlbum(albumMarconi);
+    }else if(album.title == "The Telephone"){
+      setCurrentAlbum(albumTedashii);
+    }else if(album.title == "This Time Around"){
+      setCurrentAlbum(albumPicasso);
+    };
+  }
+  albumImage.addEventListener('click', rotateAlbums);
 
   albumSongList.innerHTML = '';
 
