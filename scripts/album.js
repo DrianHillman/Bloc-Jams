@@ -136,10 +136,6 @@ window.onload = function() {
       if (songItemNumber !== currentlyPlayingSong){
         songItem.innerHTML = songItemNumber;
       }
-      // if (songItemNumber == currentlyPlayingSong){
-      //   songItem.innerHTML = pauseButtonTemplate;
-      // }
-      
     });
     
     songRows[i].addEventListener('click', function(event) {
