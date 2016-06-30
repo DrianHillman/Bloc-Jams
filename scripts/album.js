@@ -128,6 +128,7 @@ var previousSong = function() {
   }
   
   // Set a new current song
+  setSong(currentSongIndex + 1);
   currentSoundFile.play();
 
   // Update the Player Bar information
