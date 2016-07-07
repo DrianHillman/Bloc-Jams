@@ -43,7 +43,9 @@
 }
 
 .player-bar .main-controls .play-pause {
+  display: inline-block;
   margin-right: 15%;
+  min-width: 20px;
   font-size: 1.6rem;
 }
 
